@@ -1,14 +1,15 @@
 package hw.ch06;
 
-import  hw.ch06.BorderLine;
-import hw.ch06.MessageBox;
-import hw.ch06.UnderlinePen;
+
+import ch02.Sample2.Print;
 import hw.ch06.framework.Manager;
 import hw.ch06.framework.Product;
 
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println( "" );
+        System.out.println( "20120998 정아로" );
         // 준비
         Manager manager = new Manager();
         UnderlinePen upen = new UnderlinePen('-');
