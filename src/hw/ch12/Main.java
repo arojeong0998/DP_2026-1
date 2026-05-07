@@ -3,7 +3,10 @@ package hw.ch12;
 public class Main {
      public static void main(String[] args) {
 
-        
+
+        System.out.println("");
+        System.out.println("=== [20120998 정아로 ===");
+        System.out.println("");
  
         // MultiStringDisplay 준비
         MultiStringDisplay md = new MultiStringDisplay();
