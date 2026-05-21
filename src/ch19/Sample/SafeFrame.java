@@ -40,9 +40,10 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         // 그 패널을 배치 
         add(panel, BorderLayout.SOUTH);
         // 표시 
-        pack();
-        setVisible(true);
+        pack(); // Frame 크기에 맞게 배치된 컴포넌트의 크기를 결정한다
+        setVisible(true); // Frame을 화면에 표시한다
         // 리스너 설정 
+        
         buttonUse.addActionListener(this);
         buttonAlarm.addActionListener(this);
         buttonPhone.addActionListener(this);

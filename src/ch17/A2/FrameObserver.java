@@ -35,14 +35,19 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
         @Override
         public void update(NumberGenerator generator) {
             number = generator.getNumber();
-            repaint();
+            repaint(); // paint() 도화지를 클리어하고 페인트 메소드를 호출하는 것
+            // 다시 그리도로 요청한다.
         }
 
-        public void paint(Graphics g) {
+        public void paint(Graphics g) { //그레픽스라는 인자로 메소드를 호출한다. 
             int width = getWidth();
             int height = getHeight();
+
+            //아래 흰색 원 
             g.setColor(Color.white);
             g.fillArc(0, 0, width, height, 0, 360);
+
+            //빨간색 원호 
             g.setColor(Color.red);
             g.fillArc(0, 0, width, height, 90, - number * 360 / 50);
         }
@@ -53,10 +58,10 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
     private Button buttonClose = new Button("Close");
 
     public FrameObserver() {
-        super("FrameObserver");
-        setLayout(new BorderLayout());
-        setBackground(Color.lightGray);
-        textGraph.setEditable(false);
+        super("FrameObserver"); // 프레임의 제목을 설정한다.
+        setLayout(new BorderLayout()); // 프레임의 레이아웃을 BorderLayout으로 설정한다.
+        setBackground(Color.lightGray); // 프레임의 배경색을 연한 회색으로 설정한다.
+        textGraph.setEditable(false); 
         canvasGraph.setSize(500, 500);
         add(textGraph, BorderLayout.NORTH);
         add(canvasGraph, BorderLayout.CENTER);
